@@ -1,0 +1,15 @@
+{
+  "name": "workshop-website",
+  "version": "1.0.0",
+  "description": "HTML templates for workshop",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArminaJ/workshopwebsite"
+  },
+  "author": "ArminaJ",
+  "license": ""
+}
