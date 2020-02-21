@@ -24,9 +24,11 @@
     {{ $csClass = "colorscheme-auto" }}
   {{ end }}
   <body>
+
      {{ partial "header" . }}
 
     <main>
+
       {{ block "content" . }}{{ end }}
     </main>
 
