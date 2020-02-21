@@ -1,0 +1,43 @@
+@import "components/color";
+@import "components/grid/grid-all";
+
+.learning {
+  font-family: 'Verdana', Times, serif;
+
+  &-perk {
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    margin: 50px auto;
+
+    @media #{$breakpoint-small} {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &-features {
+    margin-bottom: 100px;
+
+    &__card {
+      color: $color-black;
+      text-align: center;
+      padding: 50px 10px;
+      background-color: $color-dark_gray;
+
+      .card-title {
+        white-space: nowrap;
+        margin: 20px 0;
+      }
+
+      @media #{$breakpoint-small} {
+        padding: 30px 10px;
+        margin-bottom: 20px;
+
+        .card-title {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
