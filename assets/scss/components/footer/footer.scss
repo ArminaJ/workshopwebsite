@@ -1,0 +1,18 @@
+$class-name: 'footer';
+
+.#{$class-name} {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 40px 0;
+
+  &__nav {
+    a:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__copyright {
+    font-weight: 700;
+  } 
+}
