@@ -2,9 +2,17 @@ $class-name: 'footer';
 
 .#{$class-name} {
   background-color: $color-light_gray;
+  padding: 40px 0;
 
+  @media #{$breakpoint-small} {
+    text-align: center;
+  }
 
   &__nav {
+    a {
+      font-size: 15px;
+    }
+    
     a:not(:last-child) {
       margin-right: 30px;
     }
@@ -12,5 +20,9 @@ $class-name: 'footer';
 
   &__copyright {
     font-weight: 700; 
+
+    @media #{$breakpoint-small} {
+      margin-top: 10px;
+    }
   } 
 }
