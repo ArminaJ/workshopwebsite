@@ -23,8 +23,8 @@
   {{ else if eq .Site.Params.colorscheme "auto" }}
     {{ $csClass = "colorscheme-auto" }}
   {{ end }}
-  <body class="has-navbar-fixed-top">
-      {{ partial "header" . }}
+  <body>
+         {{ partial "header" . }}
     <div class="container">
       {{ block "content" . }}{{ end }}
     </div>

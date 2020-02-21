@@ -14,10 +14,6 @@ $flexboxgrid-breakpoints:
   lg 1024px 1440rem !default;
 $flexboxgrid-max-width: 1440px !default;
 
-//
-// -- Stop editing -- //
-//
-
 $gutter-compensation: $flexboxgrid-gutter-width * .5 * -1;
 $half-gutter-width: $flexboxgrid-gutter-width * .5;
 
@@ -68,10 +64,6 @@ $half-gutter-width: $flexboxgrid-gutter-width * .5;
   padding-right: $half-gutter-width;
   padding-left: $half-gutter-width;
 
-  // @media #{$breakpoint-sm-only} {
-  //   padding-right: 7.5px;
-  //   padding-left: 7.5px;
-  // }
 }
 
 $name: sm;
