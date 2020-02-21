@@ -1,8 +1,32 @@
 {{ define "content" }}
-    <h1>{{ .Title }}</h1>
-    {{ range .Params.Components }}
-      {{ range $component, $data := . }}
-         {{ partial ( printf "%s.html" $component) (dict $component .) }}
-      {{ end }}
-    {{ end }}
+<section class="learning">
+    <div class="row learning-perk">
+        <div class="col-lg-12">
+            <h1>Learn something you like</h1>
+        </div>
+    </div>
+    <div class="row learning-features">
+        <div class="col-lg-4 col-sm-12">
+            <div class="learning-features__card">
+                <i class="fa fa-html5 fa-5x"></i>
+                <h2 class="card-title">HTML/CSS</h2>
+                <button class="button button--gray">More</button>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            <div class="learning-features__card">
+                <i class="fa fa-code fa-5x"></i>
+                <h2 class="card-title">JS</h2>
+                <button class="button button--gray">More</button>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            <div class="learning-features__card">
+                <i class="fa fa-television fa-5x"></i>
+                <h2 class="card-title">Responsive web design</h2>
+                <button class="button button--gray">More</button>
+            </div>
+        </div>
+    </div>
+</section>
 {{ end }}
