@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   {{ $cssOpts := (dict "targetPath" "css/main.css" "enableSourceMap" true ) }}
 
   {{ $style := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.css" . | toCSS | minify | fingerprint }}
@@ -24,11 +24,14 @@
     {{ $csClass = "colorscheme-auto" }}
   {{ end }}
   <body>
-         {{ partial "header" . }}
 
-    <div class="container">
+     {{ partial "header" . }}
+
+    <main>
+
       {{ block "content" . }}{{ end }}
-    </div>
+    </main>
+
      {{ partial "footer" .}}
   </body>
 
