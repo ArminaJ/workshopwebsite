@@ -1,6 +1,4 @@
-/*
-*  BASE STYLES
-*/
+$color-blue: blue;
 
 *,
 *:after,
@@ -11,6 +9,7 @@
 html {
   box-sizing: border-box;
   font-size: 14px;
+  background-color: white;
 }
 
 p {

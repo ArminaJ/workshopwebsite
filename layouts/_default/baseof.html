@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  {{ $cssOpts := (dict "targetPath" "css/main.css" "enableSourceMap" true ) }}
+
+  {{ $style := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.css" . | toCSS | minify | fingerprint }}
+  {{ $components := resources.Match "scss/components" }}
+  {{ range $components }}
+    {{ $style = slice $style . | resources.Concat .Name }}     
+  {{ end }}
+  {{ $style = slice $style | resources.Concat "main.css" }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+  <title>{{ .Site.Title }}</title>
+</head>
+
+  {{ $csClass := "colorscheme-light" }}
+  {{ if eq .Site.Params.colorscheme "dark" }}
+    {{ $csClass = "colorscheme-dark" }}
+  {{ else if eq .Site.Params.colorscheme "auto" }}
+    {{ $csClass = "colorscheme-auto" }}
+  {{ end }}
+  <body class="has-navbar-fixed-top">
+         {{ partial "header" . }}
+    <div class="container">
+      {{ block "content" . }}{{ end }}
+    </div>
+  </body>
+
+</html>
