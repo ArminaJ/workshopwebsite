@@ -24,10 +24,11 @@
     {{ $csClass = "colorscheme-auto" }}
   {{ end }}
   <body class="has-navbar-fixed-top">
-         {{ partial "header" . }}
+      {{ partial "header" . }}
     <div class="container">
       {{ block "content" . }}{{ end }}
     </div>
+     {{ partial "footer" .}}
   </body>
 
 </html>
