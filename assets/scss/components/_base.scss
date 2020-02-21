@@ -1,4 +1,4 @@
-$color-blue: blue;
+@import "components/color";
 
 *,
 *:after,
@@ -27,7 +27,7 @@ h6 {
 }
 
 a {
-  color: $color-blue;
+  color: $color-black;
   font-weight: 400;
   font-size: 12px;
   text-decoration: none;
@@ -35,5 +35,6 @@ a {
   &:focus,
   &:hover {
     text-decoration: underline;
+    color: $color-gray;
   }
 }

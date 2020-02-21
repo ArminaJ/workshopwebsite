@@ -10,9 +10,23 @@ $flexboxgrid-outer-margin: 2rem !default;
 // Syntax:
 // name SIZErem,
 $flexboxgrid-breakpoints:
-  sm 0px 1023px,
+  sm 0px 760px,
+  md 761px 1023px,
   lg 1024px 1440rem !default;
 $flexboxgrid-max-width: 1440px !default;
+
+$sm-max: 760px;
+$md-max: 1023px;
+$lg-max: 1440px;
+
+$breakpoint-small: "only screen and (min-width: 0) and (max-width: #{$sm-max})"; // sm-start -> sm-max range
+$breakpoint-medium: "only screen and (min-width: #{$sm-max}) and (max-width: #{$md-max})"; // sm-start -> sm-max range
+$breakpoint-large: "only screen and (min-width: #{$md-max}) and (max-width: #{$lg-max})"; // sm-start -> sm-max range
+
+
+// $breakpoint-lg-down: "only screen and (max-width: #{$xl-start})"; // lg-start -> up range
+// $breakpoint-lg-only: "only screen and (min-width: #{$sm-max + 1}) and (max-width: #{$lg-max})"; // lg-start -> lg-max range
+// $breakpoint-xl-up: "only screen and (min-width: #{$xl-start})"; // xl-start -> up range
 
 $gutter-compensation: $flexboxgrid-gutter-width * .5 * -1;
 $half-gutter-width: $flexboxgrid-gutter-width * .5;

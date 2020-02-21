@@ -1,10 +1,8 @@
 $class-name: 'footer';
 
 .#{$class-name} {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 40px 0;
+  background-color: $color-light_gray;
+
 
   &__nav {
     a:not(:last-child) {
@@ -13,6 +11,6 @@ $class-name: 'footer';
   }
 
   &__copyright {
-    font-weight: 700;
+    font-weight: 700; 
   } 
 }
