@@ -4,13 +4,14 @@
   margin: 10px 0 15px;
   position: relative;
   border-radius: 5px;
-  border: 2px solid $color-green;
-  font-size: 17px;
+  border: 2px solid $color-dark_blue;
+  font-size: 20px;
+  font-family: $font-bold;
   width: 100%;
 
   @media #{$breakpoint-small} {
     height: 34px;
-    font-size: 12px;
+    font-size: 15px;
   }
 
   input {
@@ -56,11 +57,13 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: -5px;
+      right: 0;
       width: 20px;
       height: 20px;
+      color: $color-dark_blue;
 
       @media #{$breakpoint-small} {
+        top: 11px;
         right: 0;
         width: 10px;
         height: 10px;

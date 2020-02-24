@@ -1,5 +1,8 @@
 @import "components/color";
 
+* {
+  font-family: $font-normal;
+}
 *,
 *:after,
 *:before {
