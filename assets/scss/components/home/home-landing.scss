@@ -1,5 +1,7 @@
+@import "fonts";
 .landing {
-  background: linear-gradient(to bottom, $color-light_gray 0%, $color-white 100%);
+  background: linear-gradient(to bottom, $color-dark_blue 0%, $color-light_gray 100%);
+  padding: 100px 0;
 
   &__info {
     text-align: center;
@@ -7,17 +9,25 @@
 
     &-title {
       font-size: 70px;
-      font-weight: 300;
       color: $color-black;
       margin-bottom: 20px;
+      font-weight: 400;
+      font-family: $font-normal;
+
+      @media #{$breakpoint-small} {
+        font-size: 65px;
+      }
     }
 
     &-description {
-      color: $color-green;
       font-size: 25px;
       font-weight: 300;
       letter-spacing: 3px;
       text-transform: uppercase;
+
+      @media #{$breakpoint-small} {
+        font-size: 20px;
+      }
     }
   }
 }
