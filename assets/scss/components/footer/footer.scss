@@ -20,9 +20,11 @@ $class-name: 'footer';
 
   &__copyright {
     font-weight: 700; 
+    text-align: right;
 
     @media #{$breakpoint-small} {
       margin-top: 10px;
+      text-align: center;
     }
   } 
 }

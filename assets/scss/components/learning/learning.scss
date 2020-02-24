@@ -2,7 +2,6 @@
 // @import "components/grid/grid-all";
 
 .learning {
-  font-family: 'Verdana', Times, serif;
   padding: 40px 0;
 
   &__perk {
@@ -11,11 +10,12 @@
 
     &-title {
       font-size: 40px;
-      font-weight: 400;
+      font-weight: 600;
       line-height: 32px;
+      font-family: $font-bold;
 
       @media #{$breakpoint-small} {
-        font-size: 18px;
+        font-size: 30px;
         line-height: 24px;
       }
     }
@@ -31,6 +31,10 @@
       border: 5px solid $color-dark_blue;
       border-radius: 8px;
 
+      .fa {
+        color: $color-dark_blue;
+      }
+
       &:hover {
         box-shadow: 0 9px 32px 0 $color-gray;
         border: 5px solid $color-black;
@@ -40,6 +44,10 @@
           border: 2px solid $color-black;
           color: $color-black;
           text-decoration: none;
+        }
+
+        .fa {
+          color: $color-black;
         }
       }
 
