@@ -1,16 +1,16 @@
 .accordion {
+  display: inline-block;
+  max-height: 50px;
+  margin: 10px 0 15px;
   position: relative;
   border-radius: 5px;
   border: 2px solid $color-green;
-  font-size: 20px;
-  height: 44px;
-  display: inline-block;
-  width: 75%;
-  margin: 0 auto 20px;
+  font-size: 17px;
+  width: 100%;
 
   @media #{$breakpoint-small} {
     height: 34px;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   input {
@@ -20,13 +20,13 @@
   }
 
   & > input:checked ~ .accordion__content {
-    transition: max-height .5s ease-in;
     display: block;
-    max-height: none;
-  }
+    height: auto;
+    overflow-wrap: break-word;
 
-  & > input:checked ~ .accordion {
-    overflow: hidden;
+    & + .accordion {
+      margin-top: 20px;
+    }
   }
 
   & > input:checked + .accordion__title {
@@ -36,8 +36,9 @@
   }
 
   &__title {
-    width: 95%;
-    padding: 10px;
+    position: relative;
+    width: 98%;
+    padding: 10px 0;
     overflow: hidden;
     user-select: none;
     cursor: pointer;
@@ -45,7 +46,7 @@
     font-weight: 700;
 
     @media #{$breakpoint-small} {
-      width: 90%;
+      width: 95%;
       padding: 7px;
     }
 
@@ -53,13 +54,14 @@
       transition: transform 0.2s ease-out;
       content: "\276F";
       position: absolute;
-      top: 25%;
-      transform: translateY(-25%);
-      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -5px;
       width: 20px;
       height: 20px;
 
       @media #{$breakpoint-small} {
+        right: 0;
         width: 10px;
         height: 10px;
       }
@@ -67,11 +69,10 @@
   }
 
   &__content {
-    overflow-x: auto;
-    padding: 10px;
-    margin-bottom: 20px;
-    max-height: 0;
     display: none;
+    padding: 10px;
+    height: 0;
+    transition: max-height .5s ease-in;
 
     @media #{$breakpoint-small} {
       padding: 9px;
