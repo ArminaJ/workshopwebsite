@@ -1,0 +1,80 @@
+.accordion {
+  position: relative;
+  border-radius: 5px;
+  border: 2px solid $color-green;
+  font-size: 20px;
+  height: 44px;
+  display: inline-block;
+  width: 75%;
+  margin: 0 auto 20px;
+
+  @media #{$breakpoint-small} {
+    height: 34px;
+    font-size: 11px;
+  }
+
+  input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  & > input:checked ~ .accordion__content {
+    transition: max-height .5s ease-in;
+    display: block;
+    max-height: none;
+  }
+
+  & > input:checked ~ .accordion {
+    overflow: hidden;
+  }
+
+  & > input:checked + .accordion__title {
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__title {
+    width: 95%;
+    padding: 10px;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+
+    @media #{$breakpoint-small} {
+      width: 90%;
+      padding: 7px;
+    }
+
+      &::after {
+      transition: transform 0.2s ease-out;
+      content: "\276F";
+      position: absolute;
+      top: 25%;
+      transform: translateY(-25%);
+      right: 0;
+      width: 20px;
+      height: 20px;
+
+      @media #{$breakpoint-small} {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  &__content {
+    overflow-x: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    max-height: 0;
+    display: none;
+
+    @media #{$breakpoint-small} {
+      padding: 9px;
+    }
+  }
+}
