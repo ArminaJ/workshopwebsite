@@ -28,12 +28,19 @@
       color: $color-black;
       text-align: center;
       padding: 50px 10px;
-      border: 2px solid $color-green;
+      border: 5px solid $color-dark_blue;
       border-radius: 8px;
 
       &:hover {
         box-shadow: 0 9px 32px 0 $color-gray;
-        border: 2px solid $color-black;
+        border: 5px solid $color-black;
+
+        .button--blue {
+          background-color: $color-dark_gray;
+          border: 2px solid $color-black;
+          color: $color-black;
+          text-decoration: none;
+        }
       }
 
       .card-title {

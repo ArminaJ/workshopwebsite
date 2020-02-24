@@ -2,7 +2,7 @@
 @import "components/grid/grid-all";
 
 .header {
-  background-color: $color-light_gray;
+  background-color: $color-dark_blue;
   padding: 16px 0;
 
   &__logo {
@@ -119,7 +119,8 @@
           font-weight: 400;
 
           &:hover {
-            color: #4aca85;
+            color: $color-light_gray;
+            text-decoration: none;
           }
         }
       }

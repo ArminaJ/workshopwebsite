@@ -1,7 +1,7 @@
 $class-name: 'footer';
 
 .#{$class-name} {
-  background-color: $color-light_gray;
+  background-color: $color-dark_blue;
   padding: 40px 0;
 
   @media #{$breakpoint-small} {
