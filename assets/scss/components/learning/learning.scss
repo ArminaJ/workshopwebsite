@@ -3,27 +3,38 @@
 
 .learning {
   font-family: 'Verdana', Times, serif;
+  padding: 40px 0;
 
-  &-perk {
-    font-size: 26px;
-    line-height: 32px;
+  &__perk {
     text-align: center;
     margin: 50px auto;
 
-    @media #{$breakpoint-small} {
-      font-size: 18px;
-      line-height: 24px;
+    &-title {
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 32px;
+
+      @media #{$breakpoint-small} {
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
   }
 
-  &-features {
+  &__features {
     margin-bottom: 100px;
 
-    &__card {
+    &-card {
       color: $color-black;
       text-align: center;
       padding: 50px 10px;
-      background-color: $color-dark_gray;
+      border: 2px solid $color-green;
+      border-radius: 8px;
+
+      &:hover {
+        box-shadow: 0 9px 32px 0 $color-gray;
+        border: 2px solid $color-black;
+      }
 
       .card-title {
         white-space: nowrap;

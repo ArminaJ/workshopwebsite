@@ -1,32 +1,37 @@
 {{ define "content" }}
+
+{{ partial "landing" . }}
+
 <section class="learning">
-    <div class="row learning-perk">
-        <div class="col-sm-12">
-            <h1>Learn something you like</h1>
-        </div>
-    </div>
-    <div class="row learning-features">
-        <div class="col-lg-4 col-md-4 col-sm-12">
-            <div class="learning-features__card">
-                <i class="fa fa-html5 fa-5x"></i>
-                <p class="card-title">HTML/CSS</p>
-                <button class="button button--gray">More</button>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
-            <div class="learning-features__card">
-                <i class="fa fa-code fa-5x"></i>
-                <p class="card-title">JS</p>
-                <button class="button button--gray">More</button>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
-            <div class="learning-features__card">
-                <i class="fa fa-television fa-5x"></i>
-                <p class="card-title">Responsive web design</p>
-                <button class="button button--gray">More</button>
-            </div>
-        </div>
-    </div>
+  <div class="row">
+      <div class="col-sm-12">
+      <div class="learning__perk">
+        <h2 class="learning__perk-title">Learn something you like</h2>
+      </div>
+      </div>
+  </div>
+  <div class="row learning__features">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="learning__features-card">
+              <i class="fa fa-html5 fa-5x"></i>
+              <p class="card-title">HTML/CSS</p>
+              <a href="#" class="button button--gray">More</a>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="learning__features-card">
+              <i class="fa fa-code fa-5x"></i>
+              <p class="card-title">JS</p>
+              <a href="#" class="button button--gray">More</a>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="learning__features-card">
+              <i class="fa fa-television fa-5x"></i>
+              <p class="card-title">Responsive web design</p>
+              <a href="#" class="button button--gray">More</a>
+          </div>
+      </div>
+  </div>
 </section>
 {{ end }}
